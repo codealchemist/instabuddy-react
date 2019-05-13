@@ -1,0 +1,5 @@
+export const LOAD = 'instabuddy/channel/load'
+export const LOAD_SUCCESS = 'instabuddy/channel/load-success'
+export const LOAD_ERROR = 'instabuddy/channel/load-error'
+export const SAVE_BUTTON = 'instabuddy/channel/save-button'
+export const DELETE_BUTTON = 'instabuddy/channel/delete-button'
