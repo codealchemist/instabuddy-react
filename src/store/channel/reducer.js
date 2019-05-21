@@ -1,4 +1,4 @@
-import { LOAD_SUCCESS, LOAD_ERROR } from './actionTypes'
+import { LOAD_SUCCESS, LOAD_ERROR, DELETE_BUTTON } from './actionTypes'
 
 const defaultState = {
   buttons: [],
@@ -20,6 +20,10 @@ const handlers = {
     name: payload.name,
     description: payload.description,
     loading: false
+  }),
+  [DELETE_BUTTON]: (state, { payload }) => ({
+    ...state,
+    buttons: state.buttons.filter(button => button.id !== payload.id)
   })
 }
 

@@ -20,9 +20,16 @@ export class ChannelPage extends React.PureComponent {
   }
 
   render() {
-    const { match, channel } = this.props
+    const { match, channel, deleteButton } = this.props
     const { channelId } = match.params
-    return <Channel id={channelId} buttons={channel.buttons} />
+    return (
+      <Channel
+        id={channelId}
+        buttons={channel.buttons}
+        saveButton={saveButton}
+        deleteButton={deleteButton}
+      />
+    )
   }
 }
 
